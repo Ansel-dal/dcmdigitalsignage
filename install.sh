@@ -4,23 +4,21 @@
 sudo apt update
 
 #instalar .Net
-curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
+sudo curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
 
-#crear la carpeta del servicio
-sudo mkdir [direccion]
 
-#voy a la carpeta del serivicio
-sudo cd [direccion]
+#voy a la carpeta donde voy a alojar el servicio
+cd /home/pi/
 
 #descargo los archivos
-sudo git clone --bare https://github.com/Ansel-dal/DCMDigitalSignagev2.git
+sudo git clone https://github.com/Ansel-dal/DCMDigitalSignagev2
 
 #creo dcmdigitalsignage.service 
 echo -e "[Unit]
 Description=dcmdigitalsignage 
 [Service]
- WorkingDirectory=[direccion]
- ExecStart=/opt/dotnet/dotnet [direccion]
+ WorkingDirectory=/home/pi/DCMDigitalSignagev2
+ ExecStart=/opt/dotnet/dotnet /home/pi/DCMDigitalSignagev2
  Restart=always   
  SyslogIdentifier=dotnet-dcmdigitalsignage    
  User=root
