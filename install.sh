@@ -4,7 +4,7 @@
 sudo apt update
 
 #instalar .Net
-sudo curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
+wget -O - https://raw.githubusercontent.com/pjgpetecodes/dotnet6pi/master/install.sh | sudo bash
 
 
 #voy a la carpeta donde voy a alojar el servicio
