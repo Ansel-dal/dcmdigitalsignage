@@ -13,6 +13,9 @@ cd /home/pi/
 #descargo los archivos
 sudo git clone https://github.com/Ansel-dal/DCMDigitalSignagev2
 
+#doy permisos para crear dcmdigitalsignage.service 
+sudo chmod ugo+rwx /etc/systemd/system/
+
 #creo dcmdigitalsignage.service 
 echo -e "[Unit]
 Description=dcmdigitalsignage 
