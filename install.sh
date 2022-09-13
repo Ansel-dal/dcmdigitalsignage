@@ -21,7 +21,7 @@ echo -e "[Unit]
 Description=dcmdigitalsignage 
 [Service]
  WorkingDirectory=/home/pi/DCMDigitalSignagev2
- ExecStart=/opt/dotnet/dotnet /home/pi/DCMDigitalSignagev2
+ ExecStart=/opt/dotnet/dotnet /home/pi/DCMDigitalSignagev2/DCMDigitalSignagev2.Server.dll
  Restart=always   
  SyslogIdentifier=dotnet-dcmdigitalsignage    
  User=root
